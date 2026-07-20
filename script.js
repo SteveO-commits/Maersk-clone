@@ -1365,3 +1365,28 @@ window.addEventListener("resize", () => {
 });
 
 renderNews();
+
+const quickTabs = document.querySelectorAll(".quick-tabs button");
+
+const quickPanels = document.querySelectorAll(".quick-content");
+
+quickTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        quickTabs.forEach(button =>
+            button.classList.remove("active")
+        );
+
+        tab.classList.add("active");
+
+        const panelName =
+            tab.textContent.trim().toLowerCase();
+
+        quickPanels.forEach(panel => {
+
+            panel.classList.toggle(
+                "active",
+                panel.dataset.panel === panelName
+            );
+        });
+    });
+});
