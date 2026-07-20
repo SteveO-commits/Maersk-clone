@@ -84,11 +84,11 @@
 
         <div class="hero-content">
             <p class="big-p">
-                Get closer to your customers with Contract Logistics
+                Go the distance with seamless inland transport
             </p>
 
             <p class="small-p">
-                Make every market your home market with scalable warehousing and distribution services built for shifting demand.
+                Move your cargo inland via road, rail, or barge – efficiently connecting ports to your inland destinations in 130+ countries.
             </p>
 
             <div class="hero-buttons">
@@ -101,11 +101,11 @@
                 </a>
             </div>
 
-            <p class="under-p">
+            <!-- <p class="under-p">
                 <img src="images/checkmark.png"> Conolidation  
                 <img src="images/checkmark.png" style="margin-left: 15px;"> Deconsolidation  
                 <img src="images/checkmark.png" style="margin-left: 15px;"> Fufilment
-            </p>
+            </p> -->
         </div>
     </section>
 
@@ -131,16 +131,58 @@
 
         <div class="divider">  </div>
 
-        <div class="quick-content">
-            <fieldset style="border-color: rgba(247, 247, 247, 0.347);">
-                <legend> B/L, container number or parcel</legend>
-                
-                <div class="input-box" style="display: flex; align-items: center;">
-                    <img src="images/location_icon.png" style="margin-left: 10px;">
-                    <input type="text" placeholder="B/L,container number or parcel" style="border: transparent; outline: none; box-shadow: none; width: 400px; margin-left: 0;">
-                </div>
-            </fieldset>
-            <button class="track-btn">Track → </button>
+        <div class="quick-panels">
+            <div class="quick-content active" data-panel="tracking">
+                <fieldset style="border-color: rgba(247, 247, 247, 0.347);">
+                    <legend> B/L, container number or parcel</legend>
+                    
+                    <div class="input-box" style="display: flex; align-items: center;">
+                        <img src="images/location_icon.png" style="margin-left: 10px;">
+                        <input type="text" placeholder="B/L,container number or parcel" style="border: transparent; outline: none; box-shadow: none; width: 400px; margin-left: 0;">
+                    </div>
+                </fieldset>
+                <button class="track-btn">Track → </button>
+            </div>
+
+            <div class="quick-content" data-panel="schedules">
+                <fieldset style="border-color: rgba(247, 247, 247, 0.347);">
+                    <legend>From</legend>
+
+                    <div class="input-box">
+                        <img src="images/location_icon.png">
+                        <input type="text" placeholder="Origin" style="border: transparent; outline: none; box-shadow: none; width: 400px; margin-left: 0;">
+                    </div>
+                </fieldset>
+
+                <fieldset style="border-color: rgba(247, 247, 247, 0.347);">
+                    <legend>To</legend>
+
+                    <div class="input-box">
+                        <img src="images/location_icon.png">
+                        <input type="text" placeholder="Destination" style="border: transparent; outline: none; box-shadow: none; width: 400px; margin-left: 0;">
+                    </div>
+
+                </fieldset>
+
+                <button class="track-btn">
+                    Search →
+                </button>
+            </div>
+
+            <div class="quick-content" data-panel="offices">
+                <fieldset style="border-color: rgba(247, 247, 247, 0.347);">
+                    <legend>Country or city</legend>
+
+                    <div class="input-box">
+                        <img src="images/location_icon.png">
+                        <input type="text" placeholder="Search" style="border: transparent; outline: none; box-shadow: none; width: 400px; margin-left: 0;">
+                    </div>
+                </fieldset>
+
+                <button class="track-btn">
+                    Find →
+                </button>
+            </div>
         </div>
     </section>
 
@@ -619,11 +661,10 @@
 
     <script src="script.js"></script>
 
-    
-<!-- 
-                          _____       _    ____   _____             _____  ____   _____
+    <!--                  _____       _    ____   _____             _____  ____   _____
             \          / |           / \  |    \ |        |  |_|  ||      |    \ |
              \   /\   /  |-----     /---\ |    / |-----   |   _   ||----- |    / |-----
-              \_/  \_/   |_____    /     \| |\ \ |_____   |  | |  ||_____ | |\ \ |_____ -->
+              \_/  \_/   |_____    /     \| |\ \ |_____   |  | |  ||_____ | |\ \ |_____
+     -->
 </body>
 </html>
