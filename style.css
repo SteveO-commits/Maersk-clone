@@ -24,14 +24,7 @@ body {
 
 .hero{
     min-height:125vh;
-    background:
-        linear-gradient(
-            rgba(0,0,0,.42),
-            rgba(129, 129, 129, 0.42)
-        ),
-
-        url("images/hero.jpg");
-
+    background: url("images/hero2.avif");
     background-size:cover;
     background-position:center;
     position:relative;
@@ -296,7 +289,6 @@ body {
     font-size: 50px;
     line-height: 1.15;
     margin-bottom: 18px;
-    letter-spacing: -1.5px;
     color: white;
 }
 
@@ -426,12 +418,29 @@ body {
 }
 
 .quick-content {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 18px;
     padding-top: 28px;
     padding: 30px 30px 30px;
+    opacity:0;
+
+    transform:translateY(8px);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+.quick-content.active{
+
+    display:flex;
+
+    opacity:1;
+
+    transform:translateY(0);
+
 }
 
 .quick-content fieldset {
