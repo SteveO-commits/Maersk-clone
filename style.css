@@ -1856,7 +1856,7 @@ body {
     /* hero */
 
     .hero {
-        height: 430px;
+        height: 500px;
         background-position: center;
         border-bottom-right-radius: 58px;
         overflow: hidden;
@@ -1865,7 +1865,7 @@ body {
     .hero-content {
         top: 100px;
         right: 20px;
-        bottom: auto;
+        bottom: calc(100% - 155px);
         left: 20px;
         width: auto;
     }
