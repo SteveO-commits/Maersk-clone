@@ -23,11 +23,11 @@ body {
 }
 
 .hero{
-    min-height:125vh;
     background: url("images/hero2.avif");
     background-size:cover;
     background-position:center;
     position:relative;
+    height: 125vh;
 }
 
 .logo {
@@ -36,7 +36,7 @@ body {
 }
 
 .logo img {
-    width: 225px;
+    width: 50px;
     height: auto;
     display: block;
 }
@@ -66,6 +66,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-top .logo-span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: extra-expanded;
+    transform: scaleX(1.4) scaleY(1);
+    display: inline-block;
+    padding-left: 13px;
 }
 
 .header-bottom {
@@ -153,11 +163,6 @@ body {
 
 .header.header-hidden {
     transform: translateY(-100%);
-}
-
-.logo img {
-    width: 225px;
-    height: auto;
 }
 
 .top-actions {
@@ -281,8 +286,8 @@ body {
 .hero-content {
     position: absolute;
     left: 20px;
-    bottom: 150px;
     width: 760px;
+    bottom: 155px;
 }
 
 .hero-content .big-p {
@@ -298,22 +303,6 @@ body {
     line-height: 1.15;
     color: white;
     margin-bottom: 18px;
-}
-
-.hero-content .under-p {
-    width: 620px;
-    font-size: 20px;
-    line-height: 1.15;
-    color: white;
-    display: flex;
-    font-size: 17px;
-}
-
-.hero-content .under-p img{
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    filter: invert(100%);
 }
 
 .hero-buttons {
@@ -535,6 +524,7 @@ body {
     gap: 28px;
     margin-bottom: 16px;
     margin-left: 20px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .alert-row img {
@@ -545,6 +535,17 @@ body {
 .alert-row p {
     font-size: 20px;
     line-height: 1.35;
+}
+
+.AR-black-btn {
+    display: inline-block;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 20px;
 }
 
 .info-cards {
@@ -982,7 +983,6 @@ body {
     font-size: 2.5em;
     font-weight: normal;
     line-height: 1.1;
-    letter-spacing: -1.5px;
     margin-bottom: 22px;
 }
 
@@ -1043,6 +1043,7 @@ body {
     line-height: 1.25;
     display: flex;
     justify-self: center;
+    font-weight: normal;
 }
 
 /* css for text revealed only on hover */
@@ -1597,7 +1598,7 @@ body {
 /* for the footer section */
 
 .footer-links-section {
-    width: 998;
+    width: 100%;
     padding: 70px 20px;
     background: #ffffff;
     color: #111;
@@ -1697,8 +1698,13 @@ body {
     gap: 10px;
 }
 
+.logo-span {
+    display: flex;
+    align-items: center;
+}
+
 .footer-brand img{
-    width: 200px;
+    width: 50px;
 }
 
 .footer-brand p{
@@ -1790,4 +1796,917 @@ body {
 .footer-contact img{
     width:24px;
     height:24px;
+}
+
+/* Responsive css for 0 - 640px */
+
+@media (max-width: 640px) {
+    /* header */
+    .header {
+        padding: 16px 16px;
+        padding-left: 5px;
+    }
+
+    .header-bottom {
+        display: none;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .top-actions {
+        gap: 10px;
+    }
+
+    .top-actions a {
+        padding: 7px;
+        font-size: 0;
+    }
+
+    .top-actions img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .top-actions .lang,
+    .top-actions .notify,
+    .top-actions .contact {
+        display: none;
+    }
+
+    .top-actions .ask {
+        padding: 9px;
+    }
+
+    .top-actions > .menu-btn {
+        display: flex;
+        width: 38px;
+        padding: 5px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .top-actions > .menu-btn span {
+        width: 100%;
+        height: 2px;
+    }
+
+    /* hero */
+
+    .hero {
+        height: 430px;
+        background-position: center;
+        border-bottom-right-radius: 58px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        top: 100px;
+        right: 20px;
+        bottom: auto;
+        left: 20px;
+        width: auto;
+    }
+
+    .hero-content .big-p {
+        width: auto;
+        margin-bottom: 24px;
+        font-size: 40px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+        font-weight: 400;
+    }
+
+    .hero-content .small-p {
+        width: auto;
+        margin-bottom: 28px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 26px;
+    }
+
+    .explore-btn,
+    .contact-btn {
+        padding: 13px 17px;
+        font-size: 17px;
+    }
+
+    .blue-box {
+        height: 70px;
+        margin-top: -50px;
+        padding: 0;
+        border-bottom-right-radius: 58px;
+    }
+
+    .quick-panel {
+        width: calc(100% - 20px);
+        margin: -48px auto 0;
+        border-radius: 10px;
+    }
+
+    .quick-tabs {
+        width: 100%;
+    }
+
+    .quick-tabs button {
+        flex: 1;
+        min-width: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding: 12px 4px 9px;
+        font-size: 13px;
+    }
+
+    .quick-tabs button img {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+    }
+
+    .quick-tabs button img[style] {
+        width: 27px !important;
+        height: 27px !important;
+    }
+
+    .quick-panels {
+        min-height: 0;
+    }
+
+    .quick-content,
+    .quick-content.active {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 20px 16px;
+    }
+
+    .quick-content fieldset {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .input-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .input-box input {
+        width: 100% !important;
+        min-width: 0;
+    }
+
+    .track-btn {
+        width: 100%;
+        min-height: 52px;
+        justify-content: center;
+        padding: 13px 18px;
+    }
+
+    .track-btn span {
+        
+        /* hmmmmmmmmmmm */
+
+    }
+
+
+    /* ---------- Information cards ---------- */
+
+    .info-section {
+        padding-top: 48px;
+    }
+
+    .alert-row {
+        margin-right: 18px;
+        margin-left: 18px;
+        gap: 16px;
+    }
+
+    .alert-row img {
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+    }
+
+    .alert-row p {
+        font-size: 18px;
+    }
+
+    .AR-black-btn {
+    margin-left: 20px;
+    width: calc(100% - 38px);
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 32px 18px 0;
+    }
+
+    .black-btn {
+    padding: 10px 15px;
+    font-size: 17px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+
+    /* ---------- Video ---------- */
+
+    .video-section {
+        margin: 70px auto;
+        padding: 0 18px;
+    }
+
+    .video-section h2 {
+        font-size: 28px;
+    }
+
+    .video-section .video-text {
+        margin-bottom: 34px;
+        font-size: 16px;
+    }
+
+    .custom-play {
+        bottom: 10px;
+        left: 10px;
+        width: 76px;
+        height: 65px;
+    }
+
+
+    /* ---------- Services ---------- */
+
+    .services-section {
+        padding: 70px 18px;
+    }
+
+    .services-intro {
+        /* hmmmmm */
+    }
+
+    .services-intro h2 {
+        font-size: 28px;
+    }
+    
+    .services-intro p {
+        font-size: 16px;
+    }
+    .service-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .service-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .service-tab {
+        flex: 0 0 auto;
+        padding: 9px 15px;
+    }
+
+    .service-card {
+        flex: 0 0 100%;
+    }
+
+
+    /* ---------- Two-column content sections ---------- */
+
+    .eastwest-section,
+    .logistics-map-section {
+        padding: 48px 18px;
+    }
+
+    .eastwest-section div:nth-child(2), .logistics-map-section  div:nth-child(2) {
+    order: -1; /* Pushes it above the first div */
+    }
+
+    .eastwest-content,
+    .logistics-map-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .eastwest-text h2,
+    .logistics-map-text h2 {
+        font-size: 28px;
+    }
+
+
+    /* ---------- Industries ---------- */
+
+    .industry-section {
+        padding: 65px 18px;
+    }
+
+    .industry-header h2 {
+        font-size: 28px;
+    }
+
+    .industry-card {
+        flex: 0 0 29%;
+    }
+
+    .industry-image {
+        width: 150px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+
+    /* ---------- Insights ---------- */
+
+    .insights-section {
+        padding: 65px 18px;
+    }
+
+    .insights-heading-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .insights-heading h2 {
+        font-size: 34px;
+    }
+
+    .insights-filter {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .insights-filter select {
+        width: 100%;
+    }
+
+    .insights-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .insights-grid > .insight-card,
+    .insights-bottom-right .insight-card {
+        width: 100%;
+        min-height: 360px;
+    }
+
+    .insight-card.featured {
+        min-height: 430px;
+    }
+
+    .insights-bottom-right {
+        display: contents;
+    }
+
+
+    /* ---------- News ---------- */
+
+    .news-heading {
+        padding: 0 18px;
+    }
+
+    .news-button {
+        margin-left: 18px;
+    }
+
+    .news-viewport {
+        padding-left: 18px;
+    }
+
+    .news-card {
+        flex: 0 0 calc(100% - 36px);
+    }
+
+    .news-controls {
+        padding: 0 18px;
+    }
+
+
+    /* ---------- Carousel controls ---------- */
+
+    .services-controls,
+    .industry-controls,
+    .news-controls {
+        min-height: 52px;
+    }
+
+    .carousel-dots,
+    .industry-dots,
+    .news-dots {
+        position: static;
+        margin-right: auto;
+        transform: none;
+    }
+
+
+    /* ---------- Footer ---------- */
+
+    .footer-links-section {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .footer-links-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .footer-top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-left: 0;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: left;
+        gap: 14px;
+        padding: 35px 20px;
+        text-align: left;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 18px;
+    }
+
+    .footer-contact a {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    /* footer-bottom section */
+
+    .footer-bottom{
+        margin-top: 60px;
+        background: white;
+    }
+
+    .footer-top-row{
+        max-width: 1400px;
+        margin-left: 0;
+        padding: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-brand{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-span {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-top-row div:nth-child(2){
+    order: -1; /* Pushes it above the first div */
+    }
+
+    .footer-top-row div:nth-child(3){
+    order: -1; /* Pushes it above the first div */
+    }
+
+    .footer-brand img{
+        width: 50px;
+    }
+
+    .footer-brand p{
+        font-size: 16px;
+        margin-left: 13px;
+    }
+
+    .footer-store-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-store-buttons img{
+        width: 100%;
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+    }
+}
+
+/* Responsive css for 641–1024px */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    /* ---------- Header ---------- */
+
+    .header {
+        padding: 18px 26px;
+    }
+
+    .header-bottom {
+        display: none;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .top-actions {
+        gap: 16px;
+    }
+
+    .top-actions a {
+        padding: 8px;
+        font-size: 0;
+    }
+
+    .top-actions img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .top-actions .lang,
+    .top-actions .notify,
+    .top-actions .contact {
+        display: none;
+    }
+
+    .top-actions .ask {
+        padding: 10px;
+    }
+
+    .top-actions > .menu-btn {
+        display: flex;
+        width: 42px;
+        padding: 5px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .top-actions > .menu-btn span {
+        width: 100%;
+        height: 2px;
+    }
+
+
+    /* ---------- Hero ---------- */
+
+    .hero {
+        min-height: 880px;
+        background-position: center;
+        border-bottom-right-radius: 64px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        top: 200px;
+        right: 36px;
+        bottom: auto;
+        left: 36px;
+        width: auto;
+        max-width: 850px;
+    }
+
+    .hero-content .big-p {
+        width: auto;
+        max-width: 800px;
+        font-size: clamp(44px, 6vw, 58px);
+        line-height: 1.08;
+    }
+
+    .hero-content .small-p {
+        width: auto;
+        max-width: 720px;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .hero-content .under-p {
+        width: auto;
+        flex-wrap: wrap;
+        gap: 14px 24px;
+    }
+
+    .hero-content .under-p img {
+        margin-left: 0 !important;
+    }
+
+
+    /* ---------- Quick panel ---------- */
+
+    .blue-box {
+        height: 80px;
+        margin-top: -55px;
+        padding: 0;
+        border-bottom-right-radius: 64px;
+    }
+
+    .quick-panel {
+        width: calc(100% - 48px);
+        max-width: 900px;
+        margin: -52px auto 0;
+    }
+
+    .quick-tabs button {
+        flex: 1;
+        justify-content: center;
+        padding: 14px 12px 10px;
+    }
+
+    .quick-content,
+    .quick-content.active {
+        width: 100%;
+        padding: 26px;
+    }
+
+    .quick-content fieldset {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .input-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .input-box input {
+        width: 100% !important;
+        min-width: 0;
+    }
+
+
+    /* ---------- Cards ---------- */
+
+    .info-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+    .industry-card {
+        flex: 0 0 calc((100% - 28px) / 2);
+    }
+
+    .industry-image {
+        width: min(100%, 300px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .news-card {
+        flex: 0 0 calc((100% - 56px) / 3);
+    }
+
+
+    /* ---------- Insights ---------- */
+
+    .insights-section {
+        padding: 75px 24px;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 250px;
+    }
+
+
+    /* ---------- Footer ---------- */
+
+    .footer-links-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 55px;
+    }
+
+    .footer-top-row {
+        padding: 0 28px;
+    }
+
+    .footer-contact {
+        flex-wrap: wrap;
+        padding: 18px;
+    }
+}
+
+/* Responsive css for 1025–1440px */
+
+/* @media (min-width: 1025px) and (max-width: 1440px) {
+
+    .header {
+        padding: 12px 18px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .main-nav {
+        gap: 25px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .top-actions {
+        gap: 3px;
+    }
+
+    .top-actions a {
+        padding: 6px 7px;
+        font-size: 15px;
+    }
+
+    .top-actions img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero {
+        min-height: 900px;
+    }
+
+    .hero-content {
+        
+    }
+
+    .hero-content .big-p {
+        font-size: 48px;
+    }
+
+    .quick-panel {
+        width: calc(100% - 48px);
+        max-width: 1180px;
+    }
+
+    .services-carousel,
+    .service-tabs {
+        max-width: 1180px;
+    }
+
+    .service-card {
+        flex: 0 0 calc((100% - 72px) / 4);
+    }
+
+    .industry-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .insights-section {
+        max-width: 1380px;
+    }
+
+    .news-card {
+        flex: 0 0 calc((100vw - 160px) / 4);
+    }
+
+    .footer-links-container {
+        gap: 40px;
+    }
+} */
+
+
+/* Responsive css for 1441–1920px */
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+
+    .header {
+        padding: 14px 28px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .main-nav {
+        gap: 34px;
+    }
+
+    .hero {
+        min-height: 920px;
+    }
+
+    .hero-content {
+        left: 34px;
+        bottom: 155px;
+        width: 820px;
+    }
+
+    .hero-content .big-p {
+        font-size: 58px;
+    }
+
+    .hero-content .small-p {
+        width: 700px;
+        font-size: 22px;
+    }
+
+    .quick-panel {
+        max-width: 1320px;
+    }
+
+    .services-carousel,
+    .service-tabs {
+        max-width: 1380px;
+    }
+
+    .eastwest-content,
+    .logistics-map-content,
+    .industry-section {
+        max-width: 1700px;
+    }
+
+    .insights-section {
+        max-width: 1600px;
+    }
+
+    .footer-links-container,
+    .footer-top-row {
+        max-width: 1700px;
+    }
+}
+
+
+/* Responsive css for 1921px and above */
+
+@media (min-width: 1921px) {
+
+    .header {
+        padding-right: max(34px, calc((100vw - 1920px) / 2));
+        padding-left: max(34px, calc((100vw - 1920px) / 2));
+    }
+
+    .hero {
+        min-height: 980px;
+    }
+
+    .hero-content {
+        left: max(40px, calc((100vw - 1920px) / 2));
+        bottom: 170px;
+        width: 900px;
+    }
+
+    .hero-content .big-p {
+        font-size: 64px;
+    }
+
+    .hero-content .small-p {
+        width: 760px;
+        font-size: 23px;
+    }
+
+    .quick-panel {
+        max-width: 1500px;
+    }
+
+    .services-section,
+    .industry-section,
+    .insights-section,
+    .eastwest-content,
+    .logistics-map-content,
+    .footer-links-container,
+    .footer-top-row {
+        max-width: 1800px;
+    }
+
+    .services-carousel,
+    .service-tabs {
+        max-width: 1500px;
+    }
+
+    .industry-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .news-card {
+        flex-basis: 390px;
+    }
 }
