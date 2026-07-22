@@ -15,11 +15,12 @@
         url("https://assets.maerskline.com/mds/fonts/headline/MaerskHeadline-Regular.woff") format("woff");
 }
 
-body {
+html, body {
     background: white;
     color: #111;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .hero{
@@ -890,7 +891,6 @@ body {
 }
 
 .eastwest-content{
-    max-width:1850px;
     margin: auto;
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -1899,20 +1899,24 @@ body {
     }
 
     .blue-box {
-        height: 70px;
+        height: 80px;
         margin-top: -50px;
         padding: 0;
         border-bottom-right-radius: 58px;
     }
 
+    /* quick panel */
+
     .quick-panel {
-        width: calc(100% - 20px);
+        width: calc(100% - 30px);
         margin: -48px auto 0;
         border-radius: 10px;
     }
 
     .quick-tabs {
         width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .quick-tabs button {
@@ -1936,10 +1940,6 @@ body {
         height: 27px !important;
     }
 
-    .quick-panels {
-        min-height: 0;
-    }
-
     .quick-content,
     .quick-content.active {
         position: relative;
@@ -1952,7 +1952,6 @@ body {
 
     .quick-content fieldset {
         width: 100%;
-        min-width: 0;
     }
 
     .input-box {
@@ -1979,7 +1978,7 @@ body {
     }
 
 
-    /* ---------- Information cards ---------- */
+    /* ---------- Info cards ---------- */
 
     .info-section {
         padding-top: 48px;
@@ -1992,9 +1991,7 @@ body {
     }
 
     .alert-row img {
-        width: 45px;
-        height: 45px;
-        flex-shrink: 0;
+        display: none;
     }
 
     .alert-row p {
@@ -2317,14 +2314,21 @@ body {
     }
 }
 
+/*  */
+
 /* Responsive css for 641–1024px */
 
 @media (min-width: 641px) and (max-width: 1024px) {
 
+    .body {
+        width: 100%;
+    }
+
     /* ---------- Header ---------- */
 
     .header {
-        padding: 18px 26px;
+        padding: 16px 16px;
+        padding-left: 5px;
     }
 
     .header-bottom {
@@ -2377,59 +2381,61 @@ body {
     /* ---------- Hero ---------- */
 
     .hero {
-        min-height: 880px;
+        height: 420px;
         background-position: center;
         border-bottom-right-radius: 64px;
         overflow: hidden;
     }
 
     .hero-content {
-        top: 200px;
-        right: 36px;
+        top: 100px;
+        right: 20px;
         bottom: auto;
-        left: 36px;
+        left: 16px;
         width: auto;
-        max-width: 850px;
     }
 
     .hero-content .big-p {
         width: auto;
-        max-width: 800px;
-        font-size: clamp(44px, 6vw, 58px);
+        font-size: 37px;
         line-height: 1.08;
     }
 
     .hero-content .small-p {
         width: auto;
-        max-width: 720px;
-        font-size: 22px;
+        font-size: 18px;
         line-height: 1.4;
     }
 
-    .hero-content .under-p {
-        width: auto;
+    .hero-buttons {
         flex-wrap: wrap;
-        gap: 14px 24px;
+        gap: 12px;
     }
 
-    .hero-content .under-p img {
-        margin-left: 0 !important;
+    .explore-btn,
+    .contact-btn {
+        padding: 10px 17px;
+        font-size: 17px;
     }
-
-
-    /* ---------- Quick panel ---------- */
 
     .blue-box {
-        height: 80px;
-        margin-top: -55px;
+        height: 90px;
+        margin-top: -50px;
         padding: 0;
-        border-bottom-right-radius: 64px;
+        border-bottom-right-radius: 58px;
     }
 
+    /*  Quick panel  */
+
     .quick-panel {
-        width: calc(100% - 48px);
+        width: calc(100% - 30px);
         max-width: 900px;
         margin: -52px auto 0;
+    }
+
+    .quick-tabs {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
     .quick-tabs button {
@@ -2440,13 +2446,16 @@ body {
 
     .quick-content,
     .quick-content.active {
+        position: relative;
         width: 100%;
-        padding: 26px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 20px 16px;
     }
 
     .quick-content fieldset {
         flex: 1;
-        min-width: 0;
     }
 
     .input-box {
@@ -2459,60 +2468,356 @@ body {
         min-width: 0;
     }
 
+    .track-btn {
+        width: 100%;
+        min-height: 52px;
+        justify-content: center;
+        padding: 13px 18px;
+    }
 
-    /* ---------- Cards ---------- */
+    .track-btn span {
+        
+        /* hmmmmmmmmmmm */
+
+    }
+
+    /* ---------- Info cards ---------- */
+
+    .info-section {
+        padding-top: 48px;
+    }
+
+    .alert-row {
+        margin-right: 18px;
+        margin-left: 18px;
+        gap: 16px;
+    }
+
+    .alert-row img {
+        display: none;
+    }
+
+    .alert-row p {
+        font-size: 20px;
+    }
+
+    .AR-black-btn {
+    margin-left: 20px;
+    width: calc(100% - 38px);
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    }
 
     .info-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 32px 18px 0;
+    }
+    
+    .black-btn {
+    padding: 10px 15px;
+    font-size: 17px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    
+    /* ---------- Video ---------- */
+
+    .video-section {
+        margin-top: 50px;
+        margin-bottom: 0;
+        padding: 0 18px;
+    }
+
+    .video-section h2 {
+        font-size: 28px;
+    }
+
+    .video-section .video-text {
+        margin-bottom: 34px;
+        font-size: 16px;
+    }
+
+    .custom-play {
+        bottom: 10px;
+        left: 10px;
+        width: 76px;
+        height: 65px;
+    }
+
+        /* ---------- Services ---------- */
+
+    .services-section {
+        padding: 60px 18px;
+    }
+
+    .services-intro {
+        /* hmmmmm */
+    }
+
+    .services-intro h2 {
+        font-size: 28px;
+    }
+    
+    .services-intro p {
+        font-size: 17px;
+    }
+    .service-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .service-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .service-tab {
+        flex: 0 0 auto;
+        padding: 9px 15px;
     }
 
     .service-card {
-        flex: 0 0 calc((100% - 24px) / 2);
+        flex: 0 0 100%;
+    }
+    
+    /* ---------- Two-column content sections ---------- */
+
+    .eastwest-section,
+    .logistics-map-section {
+        padding: 48px 18px;
+    }
+
+    .eastwest-section div:nth-child(2), .logistics-map-section  div:nth-child(2) {
+    order: -1; /* Pushes it above the first div */
+    }
+
+    .eastwest-content,
+    .logistics-map-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .eastwest-text h2,
+    .logistics-map-text h2 {
+        font-size: 28px;
+    }
+
+    
+    /* ---------- Industries ---------- */
+
+    .industry-section {
+        padding: 10px 18px;
+    }
+
+    .industry-header h2 {
+        font-size: 26px;
+    }
+
+    .industry-header p {
+        font-size: 17px;
     }
 
     .industry-card {
-        flex: 0 0 calc((100% - 28px) / 2);
+        flex: 0 0 30%;
     }
 
     .industry-image {
-        width: min(100%, 300px);
+        width: 150px;
         height: auto;
         aspect-ratio: 1;
     }
 
-    .news-card {
-        flex: 0 0 calc((100% - 56px) / 3);
+    .industry-arrows div:nth-child(1) {
+        /* Can't be bothered rn, but it's supposed t be on the left */
     }
 
 
     /* ---------- Insights ---------- */
 
     .insights-section {
-        padding: 75px 24px;
+        padding: 65px 18px;
+    }
+
+    .insights-heading-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .insights-heading h2 {
+        font-size: 26px;
+    }
+    
+    .insights-heading p {
+        font-size: 17px;
+    }
+
+    .insights-filter {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .insights-filter select {
+        width: 100%;
     }
 
     .insights-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
     }
 
+    .insights-grid > .insight-card,
+    .insights-bottom-right .insight-card {
+        width: 100%;
+        min-height: 360px;
+    }
+
+    .insight-card.featured {
+        min-height: 430px;
+    }
+
+    .insights-bottom-right {
+        display: contents;
+    }
+
+    
+    /* ---------- News ---------- */
+
+    .news-heading {
+        padding: 0 18px;
+    }
+
+    .news-heading h2 {
+        font-size: 26px;
+    }
+
+    .news-heading p {
+        font-size: 16px;
+    }
+
+    .news-button {
+        width: calc(100% - 40px);
+    }
+
+    .news-viewport {
+        padding-left: 18px;
+    }
+
+    .news-card {
+        flex: 0 0 calc(100% - 36px);
+    }
+
+    .news-controls {
+        padding: 0 18px;
+    }
 
     /* ---------- Footer ---------- */
 
+    .footer-links-section {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
     .footer-links-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 35px 55px;
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
     .footer-top-row {
-        padding: 0 28px;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-left: 0;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: left;
+        gap: 14px;
+        padding: 35px 20px;
+        text-align: left;
     }
 
     .footer-contact {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
         padding: 18px;
     }
+
+    .footer-contact a {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    /* footer-bottom section */
+
+    .footer-bottom{
+        margin-top: 60px;
+        background: white;
+    }
+
+    .footer-top-row{
+        max-width: 1400px;
+        margin-left: 0;
+        padding: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-brand{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-span {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-top-row div:nth-child(2){
+    order: -1; /* Pushes it above the first div */
+    }
+
+    .footer-top-row div:nth-child(3){
+    order: -1; /* Pushes it above the first div */
+    }
+
+    .footer-brand img{
+        width: 50px;
+    }
+
+    .footer-brand p{
+        font-size: 16px;
+        margin-left: 13px;
+    }
+
+    .footer-store-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-store-buttons img{
+        width: 100%;
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+    }
 }
+
 
 /* Responsive css for 1025–1440px */
 
